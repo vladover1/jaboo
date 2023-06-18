@@ -1,0 +1,17 @@
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.stores__link {
+  display: block;
+  width: 107px;
+  height: 35px;
+
+  @each $alias in ("google", "apple") {
+    &--#{$alias} {
+      @include icon("store-#{$alias}");
+    }
+  }
+}

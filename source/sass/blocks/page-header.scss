@@ -1,0 +1,86 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 36px;
+
+  @media ($mobile) {
+    flex-wrap: wrap;
+    background-color: #fff1da;
+  }
+
+  @media ($desktop) {
+    padding: 50px 16px;
+  }
+}
+
+.page-header__logo {
+  flex-shrink: 0;
+  order: -2;
+  margin-right: auto;
+}
+
+.page-header__auth-list {
+  display: none; // Maybe show by hamburger
+  color: #212832;
+
+  @media ($desktop) {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 52px;
+    margin-right: 22px;
+  }
+}
+
+.page-header__burger {
+  width: 24px;
+  height: 14px;
+
+  @include icon("burger");
+
+  @media ($desktop) {
+    display: none;
+  }
+}
+
+.page-header__nav {
+  width: 100%;
+  padding: 74px 0 62px;
+  font-size: 30px;
+  line-height: 1.5;
+  color: #737373;
+  letter-spacing: 0.2px;
+
+  @media ($desktop) {
+    order: -1;
+    padding: 0;
+    font-size: 17px;
+    line-height: 22px;
+    color: #212832;
+  }
+}
+
+.page-header__nav-list {
+  display: grid;
+  gap: 30px;
+  text-align: center;
+
+  @media ($desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 55px;
+    width: 70%;
+    margin-right: 66px;
+    margin-left: auto;
+  }
+}
+
+.page-header__link {
+  &--button {
+    padding: 9px 21px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,8 @@
+.firstscreen {
+  @media ($desktop) {
+    @include icon("color");
+
+    background-position: top 0 right 0;
+    background-size: 704px 724px;
+  }
+}

@@ -1,0 +1,17 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.socials__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  @each $alias in ("facebook", "instagram", "twitter", "youtube") {
+    &--#{$alias} {
+      @include icon("social-#{$alias}");
+    }
+  }
+}

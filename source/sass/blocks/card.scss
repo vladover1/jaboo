@@ -1,0 +1,79 @@
+.card {
+  padding: 20px 25px 30px;
+  font-weight: 500;
+  line-height: 124.5%;
+  color: #84829a;
+  background: #ffffff;
+  border-radius: 26px;
+  box-shadow: $shadow;
+}
+
+.card__image {
+  width: 100%;
+  margin: 0 0 24px;
+  border: 1px solid #000000;
+  border-radius: 24px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card__title {
+  margin: 0 0 12px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #080809;
+  letter-spacing: 0.015em;
+}
+
+.card__description {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+.card__date {
+  padding-right: 10px;
+  border-right: 1px solid;
+}
+
+.card__props {
+  display: flex;
+  gap: 15px;
+  margin: 0 0 30px;
+}
+
+.card__prop {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  background: #f5f5f5;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    margin: auto;
+  }
+
+  @each $alias in ("leaf", "map", "send") {
+    &--#{$alias}::before {
+      @include icon($alias);
+    }
+  }
+}
+
+.card__people {
+  position: relative;
+  padding-left: 28px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+
+    @include icon("building");
+  }
+}

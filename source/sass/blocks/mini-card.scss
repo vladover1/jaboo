@@ -1,0 +1,30 @@
+.mini-card {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 12px;
+  padding: 16px 20px;
+  font-weight: 500;
+  line-height: 124.5%;
+  color: #080809;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: $shadow;
+}
+
+.mini-card__image {
+  border-radius: 50%;
+}
+
+.mini-card__label {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #84829a;
+  letter-spacing: -0.035em;
+}
+
+.mini-card__title {
+  margin: 0 0 14px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.015em;
+}

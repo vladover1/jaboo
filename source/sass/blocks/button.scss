@@ -1,0 +1,19 @@
+.button {
+  box-sizing: border-box;
+  padding: 19px 26px 18px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  font-family: $font-open-sans;
+  text-align: center;
+  color: #ffffff;
+  background: #f1a501;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(241, 165, 1, 0.15);
+
+  &--primary {
+    padding: 15px 40px 18px;
+    background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+    box-shadow: none;
+  }
+}

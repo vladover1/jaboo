@@ -1,0 +1,51 @@
+.quote {
+  padding: 0 10px 20px;
+  font-weight: 500;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: $shadow;
+
+  @media ($desktop) {
+    position: relative;
+    padding: 44px 68px 34px 34px;
+  }
+}
+
+.quote__image {
+  margin: 0 auto 4px;
+  border-radius: 50%;
+
+  @media ($desktop) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 68px;
+    height: 68px;
+    transform: translate(-50%, -18px);
+  }
+}
+
+.quote__text {
+  margin: 0 0 20px;
+  line-height: 2;
+
+  @media ($desktop) {
+    margin-bottom: 34px;
+  }
+}
+
+.quote__cite {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  font-style: normal;
+
+  @media ($mobile) {
+    text-align: center;
+  }
+}
+
+.quote__author {
+  font-weight: 600;
+  font-size: 18px;
+}

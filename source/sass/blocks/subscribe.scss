@@ -1,0 +1,99 @@
+$bg-1: url("../img/sprite.svg#scribble") bottom 0 left -90px / 480px 361px;
+$bg-2: url("../img/sprite.svg#scribble-alter") top 0 right 0 / 264px 352px;
+
+.subscribe {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+
+  @media ($desktop) {
+    display: block;
+    margin: 158px 0 0;
+    padding: 78px;
+    background: $bg-1, $bg-2;
+    background-color: #f9f7fe;
+    background-repeat: no-repeat;
+    border-radius: 129px 20px 20px 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -100px;
+      bottom: -70px;
+      z-index: -1;
+      width: 153px;
+      height: 166px;
+
+      @include icon("decor-alter");
+    }
+  }
+}
+
+.subscribe__text {
+  margin: 0 0 75px;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 54px;
+
+  text-align: center;
+
+  @media ($mobile) {
+    display: none;
+  }
+}
+
+.subscribe__form {
+  display: flex;
+  margin-bottom: 58px;
+
+  @media ($desktop) {
+    gap: 38px;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.subscribe__field {
+  width: 364px;
+  margin: 0; // Safari
+  padding: 23px 28px;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: inherit;
+  color: #39425d;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+
+  @media ($mobile) {
+    display: none;
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+}
+
+.subscribe__button {
+  @media ($desktop) {
+    width: 180px;
+  }
+}
+
+.subscribe__telegram {
+  position: absolute;
+  top: 0;
+  right: -80px;
+  width: 60px;
+  height: 56px;
+
+  @include icon("telegram");
+
+  @media ($desktop) {
+    top: -13px;
+    right: -21px;
+    width: 70px;
+    height: 70px;
+  }
+}

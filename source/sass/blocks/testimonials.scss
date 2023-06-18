@@ -1,0 +1,42 @@
+.testimonials {
+  position: relative;
+  padding: 110px 0;
+
+  @media ($desktop) {
+    display: grid;
+    grid-template-columns: 572px 1fr;
+    padding-bottom: 215px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -177px;
+    right: -56px;
+    z-index: -1;
+    width: 153px;
+    height: 166px;
+
+    @include icon("decor");
+
+    @media ($mobile) {
+      content: "";
+    }
+  }
+}
+
+.testimonials__header {
+  margin: 0 0 70px;
+
+  @media ($mobile) {
+    text-align: center;
+  }
+
+  @media ($desktop) {
+    padding-left: 50px;
+  }
+}
+
+.testimonials__quote {
+  max-width: 402px;
+  margin: 0 10px;
+}

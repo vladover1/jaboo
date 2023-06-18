@@ -1,0 +1,22 @@
+$mobile: "max-width: 1199px";
+$desktop: "min-width: 1200px";
+
+$font-poppins: "Poppins", "sans-serif";
+$font-volkhov: "Volkhov", "serif";
+$font-open-sans: "Open Sans", "sans-serif";
+
+$shadow: 0 100px 80px rgba(0, 0, 0, 0.02), 0 64.8148px 46.8519px rgba(0, 0, 0, 0.015185),
+  0 38.5185px 25.4815px rgba(0, 0, 0, 0.012148), 0 20px 13px rgba(0, 0, 0, 0.01),
+  0 8.14815px 6.51852px rgba(0, 0, 0, 0.007851), 0 1.85185px 3.14815px rgba(0, 0, 0, 0.004815);
+
+@mixin icon($icon, $mask: false) {
+  $value: url("../img/sprite.svg##{$icon}") no-repeat center / 100%;
+
+  @if $mask {
+    mask: $value;
+  }
+
+  @else {
+    background: $value;
+  }
+}

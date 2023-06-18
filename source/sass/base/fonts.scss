@@ -1,0 +1,17 @@
+// https://gwfh.mranftl.com/fonts
+
+@mixin font-face($family, $alias, $weights: 400) {
+  @each $weight in $weights {
+    @font-face {
+      font-weight: $weight;
+      font-family: $family;
+      font-style: normal;
+      font-display: swap;
+      src: url("../fonts/#{$alias}-#{$weight}.woff2") format("woff2");
+    }
+  }
+}
+
+@include font-face("Open Sans", "open-sans", (500, 600, 700));
+@include font-face("Poppins", "poppins", (400, 500, 600, 700));
+@include font-face("Volkhov", "volkhov", 700);

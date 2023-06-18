@@ -1,0 +1,30 @@
+.progress {
+  position: relative;
+  padding-bottom: 15px;
+  font-size: 14px;
+  letter-spacing: -0.055em;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    border-radius: 30px;
+  }
+
+  &::before {
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+
+  &::after {
+    width: var(--progress, 0);
+    background-color: #8a79df;
+  }
+}
+
+.progress__value {
+  color: #8a79df;
+}

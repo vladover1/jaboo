@@ -1,0 +1,19 @@
+.play-button {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+  color: #686d77;
+
+  &::before {
+    content: "";
+    width: 52px;
+    height: 52px;
+    margin-right: 20px;
+    background: url("../img/sprite.svg#triangle") no-repeat center / 12px 13px;
+    background-color: #df6951;
+    border-radius: 50%;
+    box-shadow: 0 15px 30px rgba(223, 105, 81, 0.3);
+  }
+}

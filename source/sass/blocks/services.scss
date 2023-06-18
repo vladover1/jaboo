@@ -1,0 +1,107 @@
+.services {
+  position: relative;
+  padding: 110px 0;
+  text-align: center;
+
+  @media ($desktop) {
+    padding: 76px 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -177px;
+    right: -56px;
+    z-index: -1;
+    width: 153px;
+    height: 166px;
+
+    @include icon("decor");
+
+    @media ($desktop) {
+      top: 68px;
+      right: -78px;
+    }
+  }
+}
+
+.services__header {
+  margin: 0 0 36px;
+
+  @media ($desktop) {
+    margin-bottom: 100px;
+  }
+}
+
+.services__list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 308px);
+
+  @media ($desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.services__item {
+  position: relative;
+  margin: 0 0 35px 35px;
+  padding: 118px 25px 45px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 120px 100px;
+  border-radius: 36px;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    left: -35px;
+    z-index: -1;
+    width: 102px;
+    height: 102px;
+    background: #df6951;
+    border-radius: 30px 0 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover {
+    box-shadow: $shadow;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @each $i in (1, 2, 4) {
+    &--#{$i} {
+      background-image: url("../img/sprite.svg#service-#{$i}");
+    }
+  }
+
+  &--3 {
+    background-image: url("../img/service-3.webp");
+  }
+
+  @media ($mobile) {
+    &:nth-child(n + 3) {
+      display: none;
+    }
+  }
+}
+
+.services__title {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: $font-open-sans;
+  color: #1e1d4c;
+}
+
+.services__description {
+  margin: 0 20px;
+}

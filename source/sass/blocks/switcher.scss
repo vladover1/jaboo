@@ -1,0 +1,23 @@
+.switcher__button {
+  position: relative;
+  padding-right: 18px;
+  font-size: 17px;
+  line-height: 22px;
+  font-family: $font-open-sans;
+  color: #212832;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px;
+    height: 6px;
+
+    @include icon("arrow-down");
+  }
+}
+
+.switcher__list {
+  display: none; // WIP
+}

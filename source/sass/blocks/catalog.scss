@@ -1,0 +1,26 @@
+.catalog {
+  display: grid;
+  gap: 40px;
+
+  @media ($desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+  }
+}
+
+.catalog__title {
+  margin: 0 0 34px;
+  font-weight: 700;
+  font-size: 21px;
+  color: #080809;
+}
+
+.catalog__link {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  @media ($desktop) {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+}

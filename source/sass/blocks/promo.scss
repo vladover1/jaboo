@@ -1,0 +1,104 @@
+.promo {
+  position: relative;
+  padding-top: 74px;
+
+  @media ($desktop) {
+    min-height: 764px;
+    padding: 84px 550px 0 30px;
+  }
+}
+
+.promo__heading {
+  margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #df6951;
+  text-transform: uppercase;
+
+  @media ($mobile) {
+    display: none;
+  }
+}
+
+.promo__lead {
+  display: block;
+  margin: 0 0 48px 40px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 89px;
+  font-family: $font-volkhov;
+  color: #181e4b;
+  letter-spacing: -0.04em;
+
+  @media ($desktop) {
+    margin-bottom: 30px;
+    margin-left: 0;
+    font-size: 84px;
+  }
+}
+
+.promo__description {
+  margin-right: 160px;
+  margin-bottom: 33px;
+  line-height: 30px;
+
+  @media ($mobile) {
+    display: none;
+  }
+}
+
+.promo__image {
+  position: absolute;
+  right: -23px;
+  bottom: 24px;
+  z-index: 1;
+
+  @media ($mobile) {
+    display: none;
+  }
+}
+
+.promo__footer {
+  display: grid;
+  justify-items: center;
+  gap: 40px;
+
+  @media ($desktop) {
+    grid-template-columns: repeat(2, 174px);
+  }
+}
+
+.promo__plane {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 120px;
+  height: 90px;
+  background: url("../img/sprite.svg#plane") no-repeat center / 167px 154px;
+
+  @media ($desktop) {
+    top: 64px;
+    left: 614px;
+  }
+
+  &:hover {
+    animation: slide-in 3s;
+  }
+
+  &:first-of-type {
+    z-index: 2;
+  }
+
+  &:last-of-type {
+    @media ($mobile) {
+      display: none;
+    }
+
+    @media ($desktop) {
+      top: 111px;
+      right: -18px;
+      left: auto;
+    }
+  }
+}

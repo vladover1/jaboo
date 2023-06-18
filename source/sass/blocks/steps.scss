@@ -1,0 +1,109 @@
+.steps {
+  position: relative;
+  padding: 110px 0;
+
+  @media ($desktop) {
+    display: grid;
+    grid-template-columns: 560px 1fr;
+    gap: 30px;
+    padding: 144px 0 110px 50px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 96px;
+    left: -67px;
+    z-index: -1;
+    width: 153px;
+    height: 166px;
+
+    @include icon("decor-alter");
+
+    @media ($mobile) {
+      content: "";
+    }
+  }
+}
+
+.steps__header {
+  margin: 0 0 33px;
+
+  @media ($mobile) {
+    margin: 0 0 70px;
+    text-align: center;
+  }
+}
+
+.steps__list {
+  display: grid;
+  gap: 46px;
+
+  @media ($desktop) {
+    margin-right: 100px;
+  }
+}
+
+.steps__item {
+  position: relative;
+  padding-left: 68px;
+  line-height: 124.5%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 47px;
+    height: 48px;
+  }
+
+  @for $i from 1 through 3 {
+    &--#{$i}::before {
+      @include icon("step-#{$i}");
+    }
+  }
+}
+
+.steps__title {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.steps__cards {
+  position: relative;
+}
+
+.steps__card {
+  position: relative;
+  width: 260px;
+  margin: 35px 40px 0;
+
+  @media ($desktop) {
+    width: 320px;
+    margin-top: 72px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -154px;
+    right: -85px;
+    z-index: -1;
+    width: 414px;
+    height: 624px;
+
+    @include icon("spot");
+  }
+}
+
+.steps__mini-card {
+  position: absolute;
+  right: 6px;
+  bottom: 61px;
+  width: 224px;
+
+  @media ($mobile) {
+    display: none;
+  }
+}
